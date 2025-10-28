@@ -35,19 +35,6 @@ A beautiful, interactive JSON tree visualization tool built with React, TypeScri
 
 ---
 
-## 🖼️ Screenshots
-
-### Light Mode
-![Light Mode](https://via.placeholder.com/800x450?text=Light+Mode+Screenshot)
-
-### Dark Mode
-![Dark Mode](https://via.placeholder.com/800x450?text=Dark+Mode+Screenshot)
-
-### Search Functionality
-![Search](https://via.placeholder.com/800x450?text=Search+Feature)
-
----
-
 ## 🛠️ Tech Stack
 
 - **[React](https://react.dev/)** - UI framework
