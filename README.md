@@ -367,7 +367,7 @@ If this project helped you, please consider giving it a ⭐️ on GitHub!
 
 ---
 
-<p align="center">Made with ❤️ by <a href="https://github.com/yourusername">Pritam</a></p>
+<p align="center">Made with ❤️ by <a href="https://github.com/prtiam-git01">Pritam</a></p>
 
 <p align="center">
   <a href="#-features">Features</a> •
