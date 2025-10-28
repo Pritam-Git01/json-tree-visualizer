@@ -3,7 +3,7 @@
 A beautiful, interactive JSON tree visualization tool built with React, TypeScript, and ReactFlow. Transform complex JSON structures into intuitive, visual tree diagrams with real-time editing, search capabilities, and dark mode support.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![React](https://img.shields.io/badge/React-18.x-61dafb.svg)
+![React](https://img.shields.io/badge/React-19.x-61dafb.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6.svg)
 ![ReactFlow](https://img.shields.io/badge/ReactFlow-11.x-ff0072.svg)
 
@@ -380,7 +380,7 @@ If this project helped you, please consider giving it a ⭐️ on GitHub!
 
 ---
 
-<p align="center">Made with ❤️ by <a href="https://github.com/yourusername">Your Name</a></p>
+<p align="center">Made with ❤️ by <a href="https://github.com/yourusername">Pritam</a></p>
 
 <p align="center">
   <a href="#-features">Features</a> •
