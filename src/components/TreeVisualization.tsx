@@ -11,7 +11,7 @@ const nodeTypes = { custom: CustomNode };
 const TreeVisualization: React.FC = () => {
   const { nodes, edges, setReactFlowInstance } = useTreeContext();
 
-  const onNodeClick = useCallback((event: React.MouseEvent, node: Node<CustomNodeData>) => {
+  const onNodeClick = useCallback((_: React.MouseEvent, node: Node<CustomNodeData>) => {
     navigator.clipboard.writeText(node.data.path);
     toast.success(`Copied: ${node.data.path}`);
   }, []);
