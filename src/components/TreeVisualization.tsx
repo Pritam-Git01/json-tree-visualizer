@@ -35,17 +35,25 @@ const TreeVisualization: React.FC = () => {
           maxZoom={2}
         >
           <Background color="#E5E7EB" className="dark:!bg-gray-700" gap={20} size={1.5} />
-          <Controls className="bg-white dark:bg-gray-700 border-2 border-blue-500 shadow-lg rounded-md" />
+          <Controls
+                className="bg-white dark:bg-gray-700 border-2 border-blue-500 overflow-hidden shadow-lg rounded-md"
+                showInteractive={true}
+              />
           <MiniMap
-            nodeColor={(node: Node<CustomNodeData>) => {
-              const isDark = document.documentElement.classList.contains("dark");
-              if (node.data.type === "root") return isDark ? "#6B7280" : "#9CA3AF";
-              if (node.data.type === "objectKey") return isDark ? "#3B82F6" : "#60A5FA";
-              if (node.data.type === "arrayKey") return isDark ? "#A855F7" : "#C084FC";
-              return isDark ? "#4B5563" : "#D1D5DB";
-            }}
-            className="!rounded-xl !shadow-xl !bg-gray-100 dark:!bg-gray-700 !border-2"
-          />
+                nodeColor={(node: Node<CustomNodeData>) => {
+                  const isDark = document.documentElement.classList.contains("dark");
+                  if (node.data.type === "root")
+                    return isDark ? "#6B7280" : "#9CA3AF";
+                  if (node.data.type === "objectKey")
+                    return isDark ? "#3B82F6" : "#60A5FA";
+                  if (node.data.type === "arrayKey")
+                    return isDark ? "#A855F7" : "#C084FC";
+                  return isDark ? "#4B5563" : "#D1D5DB";
+                }}
+                className="!rounded-xl !shadow-xl !bg-gray-100 dark:!bg-gray-700 !border-gray-300 dark:!border-gray-600 !border-2"
+                maskColor="rgba(0, 0, 0, 0.1)"
+              />
+            </ReactFlow>
         </ReactFlow>
       </div>
     </div>
