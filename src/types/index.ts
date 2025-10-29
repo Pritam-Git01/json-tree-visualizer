@@ -1,4 +1,4 @@
-import type { Node, Edge, ReactFlowInstance } from "reactflow";
+import type { Node, Edge, OnNodesChange, OnEdgesChange } from "reactflow";
 
 export type NodeType = "root" | "objectKey" | "arrayKey" | "property";
 
@@ -11,11 +11,11 @@ export interface CustomNodeData {
   itemCount?: number;
 }
 
-export interface CustomNode extends Node {
-  data: CustomNodeData;
-}
 
-export type CustomEdge = Edge & { animated: boolean };
+export type CustomNode = Node<CustomNodeData>;
+
+
+export type CustomEdge = Edge & { animated?: boolean };
 
 export interface TreeStructure {
   nodes: CustomNode[];
@@ -29,11 +29,13 @@ export interface TreeContextType {
   setNodes: React.Dispatch<React.SetStateAction<CustomNode[]>>;
   edges: CustomEdge[];
   setEdges: React.Dispatch<React.SetStateAction<CustomEdge[]>>;
+  onNodesChange: OnNodesChange;
+  onEdgesChange: OnEdgesChange;
   searchQuery: string;
   setSearchQuery: (query: string) => void;
   darkMode: boolean;
   toggleDarkMode: () => void;
-  reactFlowInstance: ReactFlowInstance | null;
-  setReactFlowInstance: (instance: ReactFlowInstance | null) => void;
+  reactFlowInstance: any;
+  setReactFlowInstance: (instance: any) => void;
   clearAll: () => void;
 }
