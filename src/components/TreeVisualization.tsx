@@ -54,7 +54,6 @@ const TreeVisualization: React.FC = () => {
                 maskColor="rgba(0, 0, 0, 0.1)"
               />
             </ReactFlow>
-        </ReactFlow>
       </div>
     </div>
   );
