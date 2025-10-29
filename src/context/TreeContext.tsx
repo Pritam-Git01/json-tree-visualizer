@@ -21,9 +21,17 @@ export const TreeProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [darkMode, setDarkMode] = React.useState(false);
   const [reactFlowInstance, setReactFlowInstanceState] = React.useState<any>(null);
 
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", darkMode);
+ useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
   }, [darkMode]);
+
+  // Exposed a toggle function that ensures reactivity
+  const toggleDarkMode = () => setDarkMode((prev) => !prev);
 
   const value: TreeContextType = {
     jsonInput,
@@ -37,7 +45,7 @@ export const TreeProvider: React.FC<{ children: React.ReactNode }> = ({ children
     searchQuery,
     setSearchQuery,
     darkMode,
-    toggleDarkMode: () => setDarkMode((p) => !p),
+    toggleDarkMode,
     reactFlowInstance,
     setReactFlowInstance: setReactFlowInstanceState,
     clearAll: () => {
